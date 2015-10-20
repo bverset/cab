@@ -8,6 +8,9 @@
 		<item name="android:windowBackground">@color/accent</item>
 	</style>
 
+	<style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+	<style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
 	<style name="AppTheme.Dark.Dialog" parent="Theme.AppCompat.Dialog">
 		<item name="colorAccent">@color/primary</item>
 		<item name="android:textColorPrimary">@color/jumbo</item>
