@@ -7,55 +7,51 @@
 	tools:context=".MainActivity">
 
 	<ImageView
-		android:id="@+id/iv_ichigo"
+		android:id="@+id/iv_tiger"
 		android:layout_width="match_parent"
 		android:layout_height="100dp"
-		android:src="@drawable/ichigo"
+		android:src="@drawable/tiger"
 		/>
 
 	<Button
 		android:id="@+id/btn_accion"
 		android:layout_width="100dp"
 		android:layout_height="50dp"
+		android:layout_alignParentLeft="true"
+		android:layout_below="@id/iv_tiger"
 		android:text="Accion"
-		android:layout_below="@+id/iv_ichigo"
 		/>
-
 	<Button
 		android:id="@+id/btn_accion2"
 		android:layout_width="100dp"
 		android:layout_height="50dp"
-		android:text="Accion 2"
-		android:layout_below="@+id/iv_ichigo"
 		android:layout_alignParentRight="true"
+		android:layout_below="@+id/iv_tiger"
+		android:text="Accion 2"
 		/>
 
-
 	<LinearLayout
-		android:orientation="vertical"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:layout_below="@+id/btn_accion"
+		android:orientation="vertical"
 		android:paddingLeft="30dp"
 		>
 
 		<TextView
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
+			android:layout_gravity="center"
 			android:text="Hola"
 			android:textSize="24sp"
-			android:layout_gravity="center"
 			/>
-
 		<TextView
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
-			android:text="Cajas de "
+			android:text="Cajas de"
 			android:textSize="24sp"
 			android:layout_marginLeft="40dp"
-
 			/>
-
 		<TextView
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
@@ -64,9 +60,8 @@
 			/>
 
 
-		
-
 	</LinearLayout>
 
 
 </RelativeLayout>
+
