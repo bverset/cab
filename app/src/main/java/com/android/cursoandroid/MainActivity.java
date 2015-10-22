@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,27 +18,34 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         txvEstado = (TextView)findViewById(R.id.tv_estado);
         ciclo_vida= "Estado: onCreate";
-        txvEstado.setText(ciclo_vida);
+        //txvEstado.setText(ciclo_vida);
+        Toast.makeText(this, ciclo_vida,Toast.LENGTH_SHORT).show();
         Log.d("CLASSANDROID", "onCreate");
     }
+
     protected void onStart() {
         super.onStart();
-        ciclo_vida= "Estado: onStart";
-        txvEstado.setText(ciclo_vida);
+        ciclo_vida = "Estado: onStart";
+        ///txvEstado.setText(ciclo_vida);
+        Toast.makeText(this, ciclo_vida,Toast.LENGTH_SHORT).show();
         Log.d("CLASSANDROID","onStart");
     }
+
     protected void onResume() {
         super.onResume();
         Log.d("CLASSANDROID", "onResume");
     }
+
     protected void onStop() {
         super.onStop();
         Log.d("CLASSANDROID", "onStop");
     }
+
     protected void onPause() {
         super.onPause();
         Log.d("CLASSANDROID", "onPause");
     }
+
     protected void onDestroy() {
         super.onDestroy();
         Log.d("CLASSANDROID", "onDestroy");
