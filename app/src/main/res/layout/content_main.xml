@@ -8,11 +8,12 @@
 			  tools:context=".MainActivity">
 
 	<Button
+		android:id="@+id/btn_init"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:layout_centerHorizontal="true"
 		android:text="Iniciar Activity"
-		android:onClick="iniciarActivity"/>
+		/>
 
 	<Button
 		android:layout_width="wrap_content"

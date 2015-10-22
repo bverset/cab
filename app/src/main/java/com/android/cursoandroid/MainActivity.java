@@ -11,10 +11,18 @@ import android.widget.Toast;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class MainActivity extends AppCompatActivity {
 
     @Bind(R.id.toolbar) Toolbar toolbar;
+
+
+    @OnClick(R.id.btn_init)
+    public void iniciarActivity(View view){
+        Intent starter = new Intent(getApplicationContext(), SecondActivity.class);
+        startActivity(starter);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,10 +53,7 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void iniciarActivity(View view){
-        Intent starter = new Intent(getApplicationContext(), SecondActivity.class);
-        startActivity(starter);
-    }
+
 
     public void finalizarActivity(View view){
         finish();
