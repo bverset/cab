@@ -8,23 +8,64 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+import butterknife.Bind;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 
-    Toolbar toolbar;
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+
+    @Bind(R.id.toolbar) Toolbar toolbar;
+    Button btnIniciar,btnFinalizar;
+
+    // on peut ausi utiliser
+    // @OnClick pour relier les boutons
 
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ButterKnife.bind(this);
 
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
+       // toolbar = (Toolbar) findViewById(R.id.toolbar);  remplace par @Bind
         toolbar.setTitle("Applicacion de Ben");
         toolbar.setLogo(R.mipmap.ic_launcher);
         setSupportActionBar(toolbar);
 
+        btnIniciar = (Button) findViewById(R.id.btn_iniciar);
+        /*
+        btnIniciar.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                IniciarActivity(v);
+            }
+        });
+        */
+        btnFinalizar = (Button) findViewById(R.id.btn_finalizar);
+        /*
+        btnFinalizar.setOnClickListener(new View.OnClickListener() {
+             public void onClick(View v) {
+                 FinalizarActivity(v);
+            }
+        });
+        */
+
+        btnIniciar.setOnClickListener(this);
+        btnFinalizar.setOnClickListener(this);
+
+
+    }
+
+    public void onClick(View v) {
+        int id= v.getId();
+        if(id == btnIniciar.getId()){
+            IniciarActivity(v);
+        }
+        else if(id == btnFinalizar.getId()){
+            FinalizarActivity(v);
+        }
     }
 
     @Override
@@ -52,4 +93,6 @@ public class MainActivity extends AppCompatActivity {
         finish();
 
     }
+
+
 }
