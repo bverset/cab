@@ -12,7 +12,7 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-        int TIME = 3000;
+        int TIME = 1000;
         new Handler().postDelayed(new Runnable() {
 
             public void run () {

@@ -3,52 +3,44 @@ package com.android.cursoandroid;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    private TextView txvEstado;
-    private String ciclo_vida;
+    Toolbar toolbar;
+
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        txvEstado = (TextView)findViewById(R.id.tv_estado);
-        ciclo_vida= "Estado: onCreate";
-        //txvEstado.setText(ciclo_vida);
-        Toast.makeText(this, ciclo_vida,Toast.LENGTH_SHORT).show();
-        Log.d("CLASSANDROID", "onCreate");
+
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle("Applicacion de Ben");
+        toolbar.setLogo(R.mipmap.ic_launcher);
+        setSupportActionBar(toolbar);
+
     }
 
-    protected void onStart() {
-        super.onStart();
-        ciclo_vida = "Estado: onStart";
-        ///txvEstado.setText(ciclo_vida);
-        Toast.makeText(this, ciclo_vida,Toast.LENGTH_SHORT).show();
-        Log.d("CLASSANDROID","onStart");
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_toolbar, menu);
+        return true;
     }
 
-    protected void onResume() {
-        super.onResume();
-        Log.d("CLASSANDROID", "onResume");
-    }
-
-    protected void onStop() {
-        super.onStop();
-        Log.d("CLASSANDROID", "onStop");
-    }
-
-    protected void onPause() {
-        super.onPause();
-        Log.d("CLASSANDROID", "onPause");
-    }
-
-    protected void onDestroy() {
-        super.onDestroy();
-        Log.d("CLASSANDROID", "onDestroy");
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_msg:
+                Toast.makeText(MainActivity.this,"Hola soiy un toast", Toast.LENGTH_SHORT).show();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     public void IniciarActivity(View view){

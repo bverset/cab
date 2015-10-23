@@ -1,4 +1,5 @@
 <resources>
 	<string name="app_name">CursoAndroid</string>
 	<string name="hola">hola</string>
+	<string name="msg">msg</string>
 </resources>
