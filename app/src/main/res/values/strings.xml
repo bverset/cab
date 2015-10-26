@@ -2,4 +2,14 @@
 	<string name="app_name">CursoAndroid</string>
 	<string name="msg">MSG</string>
 	<string name="start">Start</string>
+	<string-array name="a_grupo">
+		<item>"Amigos"</item>
+		<item>"Familia"</item>
+		<item>"Socios"</item>
+	</string-array>
+	<integer-array name="a_grupo_values">
+		<item >0</item>
+		<item >1</item>
+		<item >2</item>
+	</integer-array>
 </resources>

@@ -3,14 +3,11 @@ package com.android.cursoandroid;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
-/**
- * Created by James on 20/10/15.
- */
-public class SecondActivity extends AppCompatActivity{
+public class NuevoContentActivity extends AppCompatActivity{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splash);
+        setContentView(R.layout.activity_nuevo_content);
     }
 }
