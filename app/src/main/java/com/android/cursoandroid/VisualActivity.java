@@ -62,9 +62,13 @@ public class VisualActivity extends AppCompatActivity implements View.OnClickLis
     }
 
     public void Eliminar(View view){
-        Toast.makeText(VisualActivity.this, "Eliminar", Toast.LENGTH_SHORT).show();
+        Intent i2 = new Intent();
+        VisualActivity.this.setResult(0, i2);
+        VisualActivity.this.finish();
     }
     public void Editar(View view){
-        Toast.makeText(VisualActivity.this, "Editar", Toast.LENGTH_SHORT).show();
+        Intent i2 = new Intent();
+        VisualActivity.this.setResult(1, i2);
+        VisualActivity.this.finish();
     }
 }

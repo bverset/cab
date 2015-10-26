@@ -39,8 +39,31 @@ public class NuevoActivity extends AppCompatActivity {
         i.putExtra("telefono", telefono);
         i.putExtra("grupo", grupo);
         startActivityForResult(i, 0);
-        finish();
+        //finish();
     }
+
+        @Override
+        protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+            if( resultCode==0 ) {
+                Toast.makeText(NuevoActivity.this, "Eliminar", Toast.LENGTH_SHORT).show();
+                // vaciar los campos button eliminar de visual
+                nombre = "";
+                nombre_et.setText(nombre);
+                correo = "";
+                correo_et.setText(correo);
+                edad = "";
+                edad_et.setText(edad);
+                celular = "";
+                celular_et.setText(celular);
+                telefono = "";
+                telefono_et.setText(telefono);
+                grupo_sp.setSelection(1);
+
+            }
+            else if( resultCode==1 ) {
+                Toast.makeText(NuevoActivity.this, "Editar", Toast.LENGTH_SHORT).show();
+            }
+        }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
